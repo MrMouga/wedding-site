@@ -1,0 +1,606 @@
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face { font-family: Yasashii; src: url('Yasashii.ttf'); } 
+@font-face { font-family: Tanker; src: url('Tanker.otf'); } 
+@font-face { font-family: Molika; src: url('Molika.ttf'); }
+@font-face { font-family: PingFang; src: url('PingFang Regular.ttf'); }  
+
+body{
+    color: #fff;
+    background-color: #1b1b1b;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap:5vh;
+}
+
+
+h1{
+    font-family: Yasashii;
+    font-size: 6em;
+    font-weight: bolder;
+    margin:0;
+    color:#ffdd56;
+}
+
+
+
+h2{
+    font-family: Yasashii;
+    font-size:3em;
+}
+
+#title h2{
+    margin:0;
+}
+
+p{
+    font-family:Montserrat;
+    font-size:1.5em;
+    font-weight:600;
+    line-height: 1.5em;
+}
+
+
+#title p{
+    font-size:2em;
+    margin:0;
+}
+
+h3{
+    font-family:Tanker;
+    font-size: 5em;
+    font-weight: 400;
+    color:#ffdd56;
+    margin:0;
+     
+    }
+
+
+.nav-bar{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    height:80px;
+    top:0;
+    background:rgba(0,0,0,.6);
+backdrop-filter: blur(50px);
+    position:fixed;
+    z-index:9999
+
+}
+
+li a{
+    color:white;
+    font-family: Yasashii;
+    text-decoration:none;
+    
+
+}
+
+li a:hover{
+    color:#ffdd56
+}
+
+
+span{
+    font-family:Molika;
+    font-size:1.5em;
+}
+
+
+.overlay {
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    opacity: .07;
+    mix-blend-mode: hard-light;
+    background-image: url(/img/overlay.gif);
+    background-position: 0 0;
+    background-size: auto;
+    display: block;
+    position: fixed;
+    top: 0;
+}
+
+.main-container{
+    margin-top:150px;
+    width: 100%;
+    height: 700vh;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    position: relative;
+    z-index:1000;
+
+}
+
+
+.viewport {
+    width: 70vw;
+    height: 90vh;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    position: sticky;
+    position: sticky;
+    top: 5vh;
+    overflow: hidden;
+
+  }
+
+  #sections{
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    text-align:center;
+    background-color:#0090bc;
+    border-radius: 30px;
+
+  }
+
+
+
+#title{
+    height: 90vh;
+    background-image:url(img/background-sky.jpeg);
+    background-position: 50% 100%;
+    background-size: auto;
+    flex-direction: column;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    gap:3vh;
+}
+
+#intro {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  #recap {
+    flex-direction: column;
+    flex: none;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin-top:-20vh;
+  }
+
+  .space{
+    height:10vh;
+
+}
+
+.cloud1{
+    background-image:url("img/cloud-1.png");
+    z-index: 2;
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:50vw;
+    height:60vh;
+    top:-30vh;
+    right:-40vw;
+    position:relative;
+}
+
+.cloud2{
+    background-image:url("img/cloud-1.png");
+    z-index: 2;
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:50vw;
+    height:60vh;
+    top:-70vh;
+    right:20vw;
+    position:relative;
+}
+
+.cloud3{
+    background-image:url("img/cloud-2.png");
+    z-index: 2;
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:40vw;
+    height:50vh;
+    justify-self:bottom;
+    margin:auto; 
+    position:relative;
+    margin-top:-20vh
+}
+
+
+
+
+.text-section{
+    /* position:absolute; */
+}
+
+.text-recap{
+    width:100%;
+    margin-bottom:25vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.pola-container div{
+    transition: transform 1s;
+}
+
+.pola1{
+    background-image:url(/img/Palaroid1.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+
+    position:relative;
+
+}
+
+.pola2{
+    background-image:url(/img/Palaroid2.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+}
+
+.pola3{
+    background-image:url(/img/Palaroid3.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+}
+
+.pola4{
+    background-image:url(/img/Palaroid4.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+}
+
+.pola5{
+    background-image:url(/img/Palaroid5.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+}
+
+.pola6{
+    background-image:url(/img/Palaroid6.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+
+}
+
+.pola7{
+    background-image:url(/img/Palaroid7.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+
+}
+
+
+.pola8{
+    background-image:url(/img/Palaroid8.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+
+}
+
+
+.pola9{
+    background-image:url(/img/Palaroid9.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+
+}
+
+.pola10{
+    background-image:url(/img/Palaroid10.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    width:350px;
+    height:400px;
+    margin-bottom:20px;
+}
+
+
+#invitation{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex: none;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.heart{
+    font-size: 200px;
+}
+
+.cloud4{
+    background-image: url("img/cloud-big.png");
+    background-size:stretch;
+    height:400px;
+    width:100%;
+    border-radius: 0px 0px 30px 30px;
+    
+}
+
+section{
+    width:50vw;
+    text-align:center;
+    position:relative;
+    z-index:1000;
+}
+
+.title-section p{
+    font-weight:800;
+
+    
+}
+section p{
+    font-weight:200;
+}
+
+.wedding-section{
+    margin-top:3vh;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:5vh;
+
+
+}
+
+.img-section{
+    background-image:url("https://cdn0.mariages.net/vendor/1337/3_2/960/jpg/pxl-20230505-172916480_3_181337-168331553622561.jpeg");
+    height:300px;
+    width:600px;
+    border-radius:30px;
+}
+
+
+li{
+    font-family:"PingFang";
+    font-size:1.5em;
+    list-style:none;
+    line-height:2em;
+    cursor:pointer;
+
+}
+
+li.clicked{
+    color: #ffdd56;
+    transition: color 1s;
+    transition: padding-left 1s;
+    padding-left:10px;
+
+}
+
+ul{
+    text-align:left;
+    border-left:1px solid white;
+    width:100%;
+    margin:0;
+
+}
+
+
+.content-section{
+    width:70vw;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+.desc-wedding{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+
+}
+
+.text-wedding{
+    text-align:justify;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    margin:0;
+}
+
+.text-wedding.show-text {
+    opacity: 1;
+  }
+
+  .transport-section{
+    width:70vw;
+    display:flex;
+    flex-direction:column;
+   /* justify-content: center;
+   align-items: center;
+   align-content: center; */
+   gap:5vh;
+}
+
+.content-section-2{
+    text-align:justify;
+}
+
+
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  .arrow {
+    transition: transform 0.2s ease-out;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .5em;
+    vertical-align: middle;
+    border-top: .375em solid transparent;
+    border-bottom: .375em solid transparent;
+    border-left: .375em solid currentColor;
+  }
+  
+  .rotate {
+    transform: rotate(90deg);
+  }
+  
+
+  .faq-section{
+    width:70vw;
+
+  }
+  .faq-item button{
+    width:100%;
+    background-color:transparent;
+    color:white;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding:0;
+    border:none;
+
+
+
+
+  }
+  
+  .faq-answer{
+    border-bottom:1px solid white;
+    text-align:left;
+  }
+
+
+  .link {
+	width: 10.5rem;
+	height: 10.5rem;
+	display: inline-block;
+	font: 300 1.55rem/1.4 "Josefin Sans"; 
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	word-spacing: 0.5em;
+	text-decoration: none;
+    margin-top:3%;
+}
+
+
+.link__svg {
+	width: 100%;
+	height: auto;
+	transform-box: fill-box;
+	fill: #000000;
+	stroke: #000000;
+	stroke-width: 0.05em;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.link__cloud {
+	transform-origin: 50% 50%;
+	animation: rotate normal infinite 60s linear;
+	fill: #ffdd56;
+}
+
+.link__face,
+.link__arrow {
+	transform-origin: 50% 50%;
+	transition: transform 0.15s cubic-bezier(0.32, 0, 0.67, 0);
+}
+
+.link:hover .link__face,
+.link:hover .link__arrow {
+	transform: scale(1.1);
+	transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.link__arrow {
+	stroke-width: 0.075em;
+}
+
+.link__text {
+	animation: rotateReverse normal infinite 20s linear;
+	transform-origin: 50% 50%;
+}
+
+.link:hover .link__text {
+	animation-play-state: paused;
+}
+
+.link--alt {
+	font-size: 1.15rem;
+	letter-spacing: 0;
+	word-spacing: 0;
+    
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateReverse {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+.list-sleep{
+    border:none;
+
+}
+
+.list-sleep li{
+    list-style-type: circle;
+    font-size: 1.5em;
+}
