@@ -1,7 +1,30 @@
+const mobileMenuButton = document.getElementById("mobile-menu");
+const navList = document.querySelector(".nav-list");
+const navLinks = document.querySelectorAll(".nav-link");
+
+mobileMenuButton.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navList.classList.remove("active");
+  });
+});
+
+
+
 let sections=document.getElementById("sections")
 let cloud1=document.querySelector(".cloud1")
 let cloud2=document.querySelector(".cloud2")
 let cloud3=document.querySelector(".cloud3")
+let title1=document.querySelector(".title1")
+let title2=document.querySelector(".title2")
+let title3=document.querySelector(".title3")
+let title4=document.querySelector(".title4")
+let title5=document.querySelector(".title5")
+let title6=document.querySelector(".title6")
+let title7=document.querySelector(".title7")
 
 let pola1=document.querySelector(".pola1")
 let pola2=document.querySelector(".pola2")
@@ -15,17 +38,90 @@ let pola9=document.querySelector(".pola9")
 let pola10=document.querySelector(".pola10")
 let listItems=document.querySelectorAll('li')
 let textWedding=document.querySelector(".text-wedding")
+let faqQuestions = document.querySelectorAll('.faq-question');
 
+
+const day1Content = `
+<ul>
+  <li class="item1"><button class="clicked">15h00 - Accueil du public</button></li>
+  <li class="item2"><button>15h30 pétante - Cérémonie laïque</button></li>
+  <li class="item3"><button>17h00 - Quartier libre</button></li>
+  <li class="item4"><button>18h00 - Apéro</button></li>
+  <li class="item5"><button>20h00 - Dîner assis</button></li>
+  <li class="item6"><button>23h30 pas forcément pétante - Ce pour quoi on est là</button></li>
+</ul>
+`;
+
+const day2Content = `
+<ul>
+  <li class="item7"><button class="clicked">Aux aurores - Soupe à l’oignon</button></li>
+  <li class="item8"><button>Au réveil - Brunch</button></li>
+</ul>
+`;
+
+const item1Content=`
+<p class="text-wedding">Bison futé annonce un trafic limité en Beauce, nous vous attendons donc à l’heure au domaine de la Brosse Montmort. Un nom qui tue pour fêter la vie.</p>
+`;
+
+const item2Content=`
+<p class="text-wedding">La meilleure oratrice et le plus grand rhéteur du Loir & Cher consacreront notre mariage suite à une série de discours qui auront déclenché une véritable panoplie d’émotions dans l’assemblée. Prévoyez rimmel waterproof et petits mouchoirs.</p>
+`;
+
+const item3Content=`
+<p class="text-wedding">ou presque, nous immortaliserons l’instant par quelques photos et profiterons du domaine pour jouer, chanter, danser, vivre.</p>
+`;
+
+const item4Content=`
+<p class="text-wedding">L’heure préférée des français·e·s, un instant de convivialité partagé au gré de quelques coupes de joie, pintes de rire et bouchées de bonheur.</p>
+`;
+
+const item5Content=`
+<p class="text-wedding">Passée l’appréhension de découvrir le plan de table, installez-vous confortablement et laissez le traiteur vous guider culinairement.</p>
+`;
+
+const item6Content=`
+<p class="text-wedding">Vous tressaillez depuis plusieurs heures maintenant, voici venue l’occasion de libérer cette énergie sur la piste de danse.</p>
+`;
+
+const item7Content=`
+<p class="text-wedding">Ne cherchez pas les mariés très loin, ils devraient être du côté de la piste de danse ou du bar.</p>
+`;
+
+const item8Content=`
+<p class="text-wedding">Venez vous ressourcer et raconter vos exploits de la veille autour d’un déjeuner partagé.</p>
+`;
+
+
+
+const programList = document.querySelector('.program-list');
+const programContent = document.querySelector('.program-content');
+
+
+//Parallax on scroll
 window.addEventListener('scroll', ()=> {
     sections.style.transform = "translate3d(0px, " + (-window.scrollY/1) + "px, 0px)";
     cloud1.style.transform="translate3d(0px," + (-window.scrollY/4.5)+"px, 0px)";
     cloud2.style.transform="translate3d(0px," + (-window.scrollY/2)+"px, 0px)";
+    title1.style.transform="translate3d(0px," + (-window.scrollY/2)+"px, 0px)";
+    title2.style.transform="translate3d(0px," + (-window.scrollY/3)+"px, 0px)";
+    title3.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
 
 
 
-    if(scrollY>600){
-    cloud3.style.transform="translate3d(0px," + (-window.scrollY/10)+"px, 0px)";
+    if(scrollY>400){
+    cloud3.style.transform="translate3d(0px," + (-window.scrollY/3)+"px, 0px)";
+    title4.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
+    title5.style.transform="translate3d(0px," + (-window.scrollY/5)+"px, 0px)";
+   
     }
+
+    if(scrollY>800){
+        title6.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
+        title7.style.transform="translate3d(0px," + (-window.scrollY/5)+"px, 0px)";
+       
+        }
+
+
 
     let position1 = pola1.getBoundingClientRect();
     let position2 = pola2.getBoundingClientRect();
@@ -96,52 +192,59 @@ window.addEventListener('scroll', ()=> {
 )
 
 
-// Add 'clicked' class to the first list item
-listItems[0].classList.add('clicked');
+//Change background color on scroll
+window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const startScroll1 = 3000;
+    const maxScroll1 = 5000;
+    const maxScroll2 = 7000;
+    const maxScroll3 = 8000;
+    const maxScroll4 = 10000;
 
-for (let i = 0; i < listItems.length; i++) {
-    listItems[i].addEventListener('click', function() {
-        // Remove 'clicked' class from all list items
-        for(let j = 0; j < listItems.length; j++){
-            listItems[j].classList.remove('clicked');
-        }
-        // Add 'clicked' class to the clicked list item
-        this.classList.add('clicked');
+    // Initial and target colors
+    const initial = {r: 247, g: 213, b: 192};
+    const target1 = {r: 162, g: 128, b: 116};
+    const target2 = {r: 48, g: 114, b: 120};
+    const target3 = {r: 8, g: 7, b: 45};
+    const target4 = {r: 16, g: 88, b: 104};
 
-        // Remove 'show-text' class to start fade-out effect
-        textWedding.classList.remove('show-text');
+    let rValue, gValue, bValue;
 
-        // Define a new text based on clicked item
-        let newText = '';
-        if (this.className === "item1 clicked") {
-            newText = "Nous vous donnons rendez-vous à 14h pour notre mariage civil à l'hôtel de ville de Blois. S'ensuivra une séance photo avec les familles et les amis. Vous pourrez profiter du cadre de l'hôtel de ville offrant un panorama sur la ville de Blois.";
-        } else if (this.className === "item2 clicked") {
-            newText = "Pas question de remise en forme ici, mais de la Grange de la Cueillas, à Landes-le-Gaulois, où nous ferons la fête ensemble.";
-        } else if (this.className === "item3 clicked") {
-            newText = "Nous complèterons la cérémonie civile par une cérémonie laïque, séquence émotion un peu redoutée par les futurs mariés, avec quelques discours et échange des voeux et des alliances.";
-        } else if (this.className === "item4 clicked") {
-            newText = "Manger, boire, musique, jeux, photos, bref des réjouissances.";
-        } else if (this.className === "item5 clicked") {
-            newText = "Sous réserve que nous trouvions un traiteur pour qui menu végétarien ne rime pas avec légumes vapeurs, mais c'est en bonne voie.";
-        } else if (this.className === "item6 clicked") {
-            newText = "La piste de dance a besoin d'un ponçage rigoureux, on compte sur vous.";
-        } else if (this.className === "item7 clicked") {
-            newText = "Pour les derniers encore debout, la récompense.";
-        }else if (this.className === "item8 clicked") {
-            newText = "Pour ceux qui souhaitent, un brunch réparateur vous attendra à la Grange de la Cueillas.";
-        }
+    if (scrollPosition <= startScroll1) {
+        rValue = initial.r;
+        gValue = initial.g;
+        bValue = initial.b;
+    } else if (scrollPosition > startScroll1 && scrollPosition <= maxScroll1) {
+        const percentageScrolled = (scrollPosition - startScroll1) / (maxScroll1 - startScroll1);
+        rValue = Math.floor(initial.r + (target1.r - initial.r) * percentageScrolled);
+        gValue = Math.floor(initial.g + (target1.g - initial.g) * percentageScrolled);
+        bValue = Math.floor(initial.b + (target1.b - initial.b) * percentageScrolled);
+    } else if (scrollPosition > maxScroll1 && scrollPosition <= maxScroll2) {
+        const percentageScrolled = (scrollPosition - maxScroll1) / (maxScroll2 - maxScroll1);
+        rValue = Math.floor(target1.r + (target2.r - target1.r) * percentageScrolled);
+        gValue = Math.floor(target1.g + (target2.g - target1.g) * percentageScrolled);
+        bValue = Math.floor(target1.b + (target2.b - target1.b) * percentageScrolled);
+    } else if (scrollPosition > maxScroll2 && scrollPosition <= maxScroll3) {
+        const percentageScrolled = (scrollPosition - maxScroll2) / (maxScroll3 - maxScroll2);
+        rValue = Math.floor(target2.r + (target3.r - target2.r) * percentageScrolled);
+        gValue = Math.floor(target2.g + (target3.g - target2.g) * percentageScrolled);
+        bValue = Math.floor(target2.b + (target3.b - target2.b) * percentageScrolled);
+    } else if (scrollPosition > maxScroll3 && scrollPosition <= maxScroll4) {
+        const percentageScrolled = (scrollPosition - maxScroll3) / (maxScroll4 - maxScroll3);
+        rValue = Math.floor(target3.r + (target4.r - target3.r) * percentageScrolled);
+        gValue = Math.floor(target3.g + (target4.g - target3.g) * percentageScrolled);
+        bValue = Math.floor(target3.b + (target4.b - target3.b) * percentageScrolled);
+    } else {
+        // After all transitions are complete
+        rValue = target4.r;
+        gValue = target4.g;
+        bValue = target4.b;
+    }
 
-        // Wait for 500ms (0.5 seconds) then update text and add 'show-text' class to start fade-in effect
-        setTimeout(function() {
-            textWedding.textContent = newText;
-            textWedding.classList.add('show-text');
-        }, 400);
-    });
-}
+    // Apply the calculated background color
+    document.body.style.backgroundColor = `rgb(${rValue},${gValue},${bValue})`;
+});
 
-
-
-let faqQuestions = document.querySelectorAll('.faq-question');
 
 faqQuestions.forEach(question => {
   question.addEventListener('click', () => {
@@ -151,3 +254,69 @@ faqQuestions.forEach(question => {
     arrow.classList.toggle('rotate');
   });
 });
+
+
+
+// Function to remove "clicked" class from a list of buttons
+const removeClicked = (buttons) => {
+buttons.forEach(btn => {
+  btn.classList.remove('clicked');
+});
+};
+
+// Function to add click event to program list buttons
+const addProgramListEvent = () => {
+const programButtons = document.querySelectorAll('.program-list button');
+programButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    removeClicked(programButtons);
+    this.classList.add('clicked');
+
+    if (this.parentElement.classList.contains('item1')) {
+        programContent.innerHTML = item1Content;
+      } else if (this.parentElement.classList.contains('item2')) {
+        programContent.innerHTML = item2Content;
+      } else if (this.parentElement.classList.contains('item3')) {
+        programContent.innerHTML = item3Content;
+      } else if (this.parentElement.classList.contains('item4')) {
+        programContent.innerHTML = item4Content;
+      } else if (this.parentElement.classList.contains('item5')) {
+        programContent.innerHTML = item5Content;
+      }else if (this.parentElement.classList.contains('item6')) {
+        programContent.innerHTML = item6Content;
+      }else if (this.parentElement.classList.contains('item7')) {
+        programContent.innerHTML = item7Content;
+      }else if (this.parentElement.classList.contains('item8')) {
+        programContent.innerHTML = item8Content;
+      }
+
+
+
+    
+  });
+});
+};
+
+// Select all buttons within element with class "days"
+const dayButtons = document.querySelectorAll('.days button');
+dayButtons.forEach(button => {
+button.addEventListener('click', function() {
+  removeClicked(dayButtons);
+  this.classList.add('clicked');
+  
+  if (this.parentElement.classList.contains('day-1')) {
+    programList.innerHTML = day1Content;
+    programContent.innerHTML = item1Content;
+  } else if (this.parentElement.classList.contains('day-2')) {
+    programList.innerHTML = day2Content;
+    programContent.innerHTML = item7Content;
+    
+  }
+
+  // Add click event to new program list buttons
+  addProgramListEvent();
+});
+});
+
+// Initialize
+addProgramListEvent();
