@@ -10,7 +10,7 @@ html, body {
 
 body{
     color: #fff;
-    background-color: rgb(247, 213, 192);
+    background-color: #f1c232ff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -70,42 +70,6 @@ h3{
     }
 
     
-/* 
-
-
-.nav-bar{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-around;
-    align-items: center;
-    color:white;
-    height:80px;
-    top:0;
-    background:rgba(0,0,0,.6);
-backdrop-filter: blur(50px);
-    position:fixed;
-    z-index:9999
-
-}
-
-.nav-bar ul{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    width:100%;
-}
-
-.nav-bar li a{
-    color:white;
-    font-family: PingFang;
-    text-decoration:none;
-    
-
-}
-
-.nav-bar li a:hover{
-    color:#ffdd56
-} */
 
 
 span{
@@ -298,6 +262,7 @@ backdrop-filter: blur(50px);
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index:1000;
   }
 
   #recap {
@@ -363,6 +328,8 @@ backdrop-filter: blur(50px);
     flex-direction:column;
     justify-content: center;
     align-content: center;
+    position:relative;
+    z-index:1000;
 }
 
 
@@ -546,6 +513,7 @@ section p{
     font-size:1.8em;
     margin:0;
     padding:0;
+
 }
 
 .days button{
@@ -579,10 +547,20 @@ section p{
 
 .program-list{
     flex: 1 1 50%;
-
+    border-left:1px solid white;
+    padding:2%;
     font-size:1.8em;
     text-align:left;
     line-height: 2em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text-section-2 span{
+    font-family:Cyrene;
+    color:yellow;
 
 }
 
@@ -876,6 +854,10 @@ text-align:left;
 /* Mobile Phones */
 @media (max-width: 600px) {
 
+    .main-container{
+        height:500vh;
+    }
+
     .viewport{
         width:90vw;
 
@@ -931,9 +913,7 @@ text-align:left;
     width:150px;
 }
 
-#festivites{
-    margin-top:-200vh;
-}
+
 
 .program-container{
     flex-direction:column;
@@ -965,9 +945,7 @@ text-align:left;
         height:60vh;
     }
 
-    .festivites{
-        width:90vh;
-    }
+
 
     .img-domaine{
         height:20vh;
@@ -1014,6 +992,18 @@ text-align:left;
     font-size:1.4em;
 }
 
+.cloud3{
+    top:150px;
+}
+
+.faq-question{
+    font-size: 1.1em;
+}
+
+.section-icon{
+    font-size:6em;
+    margin:0;
+}
 
 }
 
@@ -1060,15 +1050,18 @@ text-align:left;
         height:60vh;
     }
 
-    .festivites{
-        width:90vh;
-    }
+
 
     .img-domaine{
         height:25vh;
     }
- 
+
+    .section-icon{
+        font-size:6em;
+        margin:0;
+      }
 }
+
 
 /* Medium Screens */
 @media (min-width: 769px) and (max-width: 1023px) {
@@ -1107,9 +1100,7 @@ text-align:left;
         height:60vh;
     }
 
-    .festivites{
-        width:90vh;
-    }
+  
 
     .img-domaine{
         height:35vh;

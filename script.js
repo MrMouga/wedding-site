@@ -26,6 +26,8 @@ let title5=document.querySelector(".title5")
 let title6=document.querySelector(".title6")
 let title7=document.querySelector(".title7")
 
+
+
 let pola1=document.querySelector(".pola1")
 let pola2=document.querySelector(".pola2")
 let pola3=document.querySelector(".pola3")
@@ -36,6 +38,9 @@ let pola7=document.querySelector(".pola7")
 let pola8=document.querySelector(".pola8")
 let pola9=document.querySelector(".pola9")
 let pola10=document.querySelector(".pola10")
+
+
+
 let listItems=document.querySelectorAll('li')
 let textWedding=document.querySelector(".text-wedding")
 let faqQuestions = document.querySelectorAll('.faq-question');
@@ -80,7 +85,9 @@ const item5Content=`
 `;
 
 const item6Content=`
-<p class="text-wedding">Vous tressaillez depuis plusieurs heures maintenant, voici venue l’occasion de libérer cette énergie sur la piste de danse.</p>
+<p class="text-wedding">Vous tressaillez depuis plusieurs heures, 
+voici maintenant venue l’occasion de 
+libérer cette énergie sur la piste de danse.</p>
 `;
 
 const item7Content=`
@@ -98,93 +105,100 @@ const programContent = document.querySelector('.program-content');
 
 
 //Parallax on scroll
+
 window.addEventListener('scroll', ()=> {
     sections.style.transform = "translate3d(0px, " + (-window.scrollY/1) + "px, 0px)";
-    cloud1.style.transform="translate3d(0px," + (-window.scrollY/4.5)+"px, 0px)";
-    cloud2.style.transform="translate3d(0px," + (-window.scrollY/2)+"px, 0px)";
-    title1.style.transform="translate3d(0px," + (-window.scrollY/2)+"px, 0px)";
-    title2.style.transform="translate3d(0px," + (-window.scrollY/3)+"px, 0px)";
-    title3.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
+    // if (window.innerWidth > 600) {
+      cloud1.style.transform="translate3d(0px," + (-window.scrollY/4.5)+"px, 0px)";
+      cloud2.style.transform="translate3d(0px," + (-window.scrollY/2)+"px, 0px)";
+      title1.style.transform="translate3d(0px," + (-window.scrollY/2)+"px, 0px)";
+      title2.style.transform="translate3d(0px," + (-window.scrollY/3)+"px, 0px)";
+      title3.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
+  
+  
+  
+      if(scrollY>400){
+      cloud3.style.transform="translate3d(0px," + (-window.scrollY/3)+"px, 0px)";
+      title4.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
+      title5.style.transform="translate3d(0px," + (-window.scrollY/5)+"px, 0px)";
+     
+      }
+  
+      if(scrollY>800){
+          title6.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
+          title7.style.transform="translate3d(0px," + (-window.scrollY/5)+"px, 0px)";
+         
+          }
 
+      let position1 = pola1.getBoundingClientRect();
+      let position2 = pola2.getBoundingClientRect();
+      let position3 = pola3.getBoundingClientRect();
+      let position4 = pola4.getBoundingClientRect();
+      let position5 = pola5.getBoundingClientRect();
+      let position6 = pola6.getBoundingClientRect();
+      let position7 = pola7.getBoundingClientRect();
+      let position8 = pola8.getBoundingClientRect();
+      let position9 = pola9.getBoundingClientRect();
+      let position10 = pola10.getBoundingClientRect();
 
+  
+  
+      
+  
+      // checking whether the element is in the viewport
+      if (position1.top >= 0 && position1.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola1.style.transform = 'translateY(-100px) rotate(10deg)';
+      }
+  
+      if (position2.top >= 0 && position2.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola2.style.transform = 'translateY(-100px) rotate(-10deg)';
+      }
+  
+      if (position3.top >= 0 && position3.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola3.style.transform = 'translateY(-100px) rotate(15deg)';
+      }
+  
+      if (position4.top >= 0 && position4.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola4.style.transform = 'translateY(-100px) rotate(-20deg)';
+      }
+  
+      if (position5.top >= 0 && position5.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola5.style.transform = 'translateY(-100px) rotate(25deg)';
+      }
+  
+      if (position6.top >= 0 && position6.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola6.style.transform = 'translateY(-100px) rotate(-14deg)';
+      }
+  
+      if (position7.top >= 0 && position7.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola7.style.transform = 'translateY(-100px) rotate(5deg)';
+      }
+  
+      if (position8.top >= 0 && position8.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola8.style.transform = 'translateY(-100px) rotate(-10deg)';
+      }
+  
+      if (position9.top >= 0 && position9.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola9.style.transform = 'translateY(-100px) rotate(20deg)';
+      }
+  
+      if (position10.top >= 0 && position10.bottom <= window.innerHeight) {
+          // move the element up by 100px
+          pola10.style.transform = 'translateY(-100px) rotate(-10deg)';
+      }
+  
+  
 
-    if(scrollY>400){
-    cloud3.style.transform="translate3d(0px," + (-window.scrollY/3)+"px, 0px)";
-    title4.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
-    title5.style.transform="translate3d(0px," + (-window.scrollY/5)+"px, 0px)";
-   
-    }
-
-    if(scrollY>800){
-        title6.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
-        title7.style.transform="translate3d(0px," + (-window.scrollY/5)+"px, 0px)";
-       
-        }
-
-
-
-    let position1 = pola1.getBoundingClientRect();
-    let position2 = pola2.getBoundingClientRect();
-    let position3 = pola3.getBoundingClientRect();
-    let position4 = pola4.getBoundingClientRect();
-    let position5 = pola5.getBoundingClientRect();
-    let position6 = pola6.getBoundingClientRect();
-    let position7 = pola7.getBoundingClientRect();
-    let position8 = pola8.getBoundingClientRect();
-    let position9 = pola9.getBoundingClientRect();
-    let position10 = pola10.getBoundingClientRect();
-
-    // checking whether the element is in the viewport
-    if (position1.top >= 0 && position1.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola1.style.transform = 'translateY(-100px) rotate(10deg)';
-    }
-
-    if (position2.top >= 0 && position2.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola2.style.transform = 'translateY(-100px) rotate(-10deg)';
-    }
-
-    if (position3.top >= 0 && position3.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola3.style.transform = 'translateY(-100px) rotate(15deg)';
-    }
-
-    if (position4.top >= 0 && position4.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola4.style.transform = 'translateY(-100px) rotate(-20deg)';
-    }
-
-    if (position5.top >= 0 && position5.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola5.style.transform = 'translateY(-100px) rotate(25deg)';
-    }
-
-    if (position6.top >= 0 && position6.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola6.style.transform = 'translateY(-100px) rotate(-14deg)';
-    }
-
-    if (position7.top >= 0 && position7.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola7.style.transform = 'translateY(-100px) rotate(5deg)';
-    }
-
-    if (position8.top >= 0 && position8.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola8.style.transform = 'translateY(-100px) rotate(-10deg)';
-    }
-
-    if (position9.top >= 0 && position9.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola9.style.transform = 'translateY(-100px) rotate(20deg)';
-    }
-
-    if (position10.top >= 0 && position10.bottom <= window.innerHeight) {
-        // move the element up by 100px
-        pola10.style.transform = 'translateY(-100px) rotate(-10deg)';
-    }
-
+    // }
 
 
 
@@ -202,7 +216,7 @@ window.addEventListener('scroll', function() {
     const maxScroll4 = 10000;
 
     // Initial and target colors
-    const initial = {r: 247, g: 213, b: 192};
+    const initial = {r: 241, g: 194, b: 50};
     const target1 = {r: 162, g: 128, b: 116};
     const target2 = {r: 48, g: 114, b: 120};
     const target3 = {r: 8, g: 7, b: 45};
@@ -246,14 +260,6 @@ window.addEventListener('scroll', function() {
 });
 
 
-faqQuestions.forEach(question => {
-  question.addEventListener('click', () => {
-    let answer = question.nextElementSibling;
-    let arrow = question.querySelector('.arrow');
-    answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
-    arrow.classList.toggle('rotate');
-  });
-});
 
 
 
@@ -320,3 +326,13 @@ button.addEventListener('click', function() {
 
 // Initialize
 addProgramListEvent();
+
+//FAQ
+faqQuestions.forEach(question => {
+  question.addEventListener('click', () => {
+    let answer = question.nextElementSibling;
+    let arrow = question.querySelector('.arrow');
+    answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
+    arrow.classList.toggle('rotate');
+  });
+});
