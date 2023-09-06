@@ -10,7 +10,7 @@ html, body {
 
 body{
     color: #fff;
-    background-color: #f1c232ff;
+    background-color: #DBB043;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -18,6 +18,9 @@ body{
     gap:5vh;
 }
 
+strong {
+    font-weight: 600;
+}
 
 .logo{
     font-size:2em;
@@ -50,7 +53,7 @@ h2{
 p{
     font-family:Montserrat;
     font-size:1.5em;
-    font-weight:600;
+    font-weight:500;
     line-height: 1.5em;
 }
 
@@ -108,7 +111,7 @@ backdrop-filter: blur(50px);
 
 .navbar li a{
     color:white;
-    font-family: PingFang;
+    font-family: Montserrat;
     text-decoration:none;
     font-size:1.4em;
     
@@ -117,7 +120,7 @@ backdrop-filter: blur(50px);
 
 .navbar li a:hover{
     color:#ffdd56;
-    font-weight:800;
+    font-weight:600;
     text-decoration: wavy underline;
 
 
@@ -160,7 +163,7 @@ backdrop-filter: blur(50px);
   @media screen and (max-width: 768px) {
     .menu-toggle {
       display: flex;
-      position:fixed;
+
       
    
     }
@@ -177,7 +180,7 @@ backdrop-filter: blur(50px);
       width: 100%;
       height: 100vh;
       position: fixed;
-      top: -100%;
+      top: -200%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -204,7 +207,7 @@ backdrop-filter: blur(50px);
 .main-container{
     margin-top:150px;
     width: 100%;
-    height: 700vh;
+    height: 600vh;
     justify-content: center;
     align-items: flex-start;
     display: flex;
@@ -255,11 +258,11 @@ backdrop-filter: blur(50px);
 }
 
 #intro {
-    height: 90vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     flex: none;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     position: relative;
     z-index:1000;
@@ -338,104 +341,57 @@ backdrop-filter: blur(50px);
     transition: transform 1s;
 }
 
-.pola1{
-    background-image:url(/img/Palaroid1.png);
+.pola1, .pola2, .pola3, .pola4, .pola5, .pola6, .pola7{
     background-size: contain;
     background-repeat:no-repeat;
     width:350px;
     height:400px;
     margin-bottom:20px;
-
+    z-index:1000;
     position:relative;
+
+}
+
+.pola1{
+    background-image:url(/img/Palaroid1.png);
+
 
 }
 
 .pola2{
     background-image:url(/img/Palaroid2.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
+
+
 }
 
 .pola3{
     background-image:url(/img/Palaroid3.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
+
 }
 
 .pola4{
     background-image:url(/img/Palaroid4.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
+
 }
 
 .pola5{
     background-image:url(/img/Palaroid5.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
+
 }
 
 .pola6{
     background-image:url(/img/Palaroid6.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
+
 
 }
 
 .pola7{
     background-image:url(/img/Palaroid7.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
+
 
 }
 
 
-.pola8{
-    background-image:url(/img/Palaroid8.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
-
-}
-
-
-.pola9{
-    background-image:url(/img/Palaroid9.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
-
-}
-
-.pola10{
-    background-image:url(/img/Palaroid10.png);
-    background-size: contain;
-    background-repeat:no-repeat;
-    width:350px;
-    height:400px;
-    margin-bottom:20px;
-}
 
 
 #invitation{
@@ -470,14 +426,14 @@ section{
 
 
 section p{
-    font-weight:200;
+    font-weight:300;
 }
 
 
 
 
 .nav-bar li{
-    font-family:"PingFang";
+    font-family:Montserrat;
     font-size:1.5em;
     list-style:none;
     line-height:2em;
@@ -548,12 +504,12 @@ section p{
 .program-list{
     flex: 1 1 50%;
     border-left:1px solid white;
-    padding:2%;
+    padding:1%;
     font-size:1.8em;
     text-align:left;
     line-height: 2em;
     display:flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 
 }
@@ -568,6 +524,7 @@ section p{
     margin:0;
     padding:0;
     list-style: none;
+    width:100%;
 
 }
 
@@ -577,7 +534,7 @@ section p{
     border:none;
     color:white;
     cursor:pointer;
-    font-family: PingFang;
+    font-family: Montserrat;
     font-size:1em;
     transition-duration:1s;
   
@@ -620,7 +577,7 @@ section p{
 .text-wedding{
 
     color:#3F2E3A;
-    padding:50px;
+    padding:40px;
 
 }
 
@@ -680,7 +637,7 @@ section p{
   .list-sleep{
     border:none;
     text-align:center;
-    font-family:PingFang;
+    font-family:Montserrat;
     margin-left:0;
     line-height:3em;
     margin-top:5%;
@@ -695,7 +652,7 @@ section p{
 }
 
 .list-sleep a{
-    font-family:PingFang;
+    font-family:Montserrat;
     color:white;
 }
 
@@ -832,7 +789,7 @@ text-align:left;
     
 } 
 
-@keyframes rotate {
+ /* @keyframes rotate {
 	to {
 		transform: rotate(360deg);
 	}
@@ -842,7 +799,7 @@ text-align:left;
 	to {
 		transform: rotate(-360deg);
 	}
-}
+}  */
 
 .signature{
     font-size: 0.9em;
@@ -854,8 +811,10 @@ text-align:left;
 /* Mobile Phones */
 @media (max-width: 600px) {
 
+
+
     .main-container{
-        height:500vh;
+        height:400vh;
     }
 
     .viewport{
@@ -897,18 +856,16 @@ text-align:left;
 }
 
 #intro{
-    height:60vh;
+    height:30vh;
 }
 
 #recap{
     margin-top:-10vh;
 }
 
-.pola-container{
-    margin-top:-20vh;
-}
 
-.pola1, .pola2, .pola3, .pola4, .pola5, .pola6, .pola7, .pola8, .pola9, .pola10{
+
+.pola1, .pola2, .pola3, .pola4, .pola5, .pola6, .pola7{
     height:200px;
     width:150px;
 }
@@ -932,7 +889,8 @@ text-align:left;
     }
 
     .program-list li{
-        font-size:0.6em;
+        font-size:0.5em;
+
     }
 
     .text-wedding{
@@ -961,9 +919,8 @@ text-align:left;
     }
 
     .program-list ul{
- text-align:center;
- line-height:1.2em;
- margin-bottom:10%;
+ text-align:left;
+ line-height:1.5em;
     }
 
     .days button{
@@ -971,15 +928,18 @@ text-align:left;
     }
 
     .program-list button{
-        text-align:center;
+        text-align:left;
         font-size:1.4em;
     }
  .program-container{
     margin-top:10%;
  }
 
+ .program-content{
+    margin-top:5%;
+ }
  .list-sleep li{
-    font-size:1.5em;
+    font-size:1.3em;
     line-height:1.5em;
     text-align:center;
  }
@@ -1004,6 +964,7 @@ text-align:left;
     font-size:6em;
     margin:0;
 }
+
 
 }
 
@@ -1106,6 +1067,18 @@ text-align:left;
         height:35vh;
     }
 
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes rotateReverse {
+        to {
+            transform: rotate(-360deg);
+        }
+    } 
+
 }
 
 /* Large Screens */
@@ -1137,5 +1110,34 @@ text-align:left;
     .program-content{
         height:100%;
     }
+
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes rotateReverse {
+        to {
+            transform: rotate(-360deg);
+        }
+    } 
+
+}
+
+@media (min-width: 1200px) {
+
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+   
+    
+    @keyframes rotateReverse {
+        to {
+            transform: rotate(-360deg);
+        }
+    } 
 
 }

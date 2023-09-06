@@ -21,10 +21,6 @@ let cloud3=document.querySelector(".cloud3")
 let title1=document.querySelector(".title1")
 let title2=document.querySelector(".title2")
 let title3=document.querySelector(".title3")
-let title4=document.querySelector(".title4")
-let title5=document.querySelector(".title5")
-let title6=document.querySelector(".title6")
-let title7=document.querySelector(".title7")
 
 
 
@@ -35,10 +31,6 @@ let pola4=document.querySelector(".pola4")
 let pola5=document.querySelector(".pola5")
 let pola6=document.querySelector(".pola6")
 let pola7=document.querySelector(".pola7")
-let pola8=document.querySelector(".pola8")
-let pola9=document.querySelector(".pola9")
-let pola10=document.querySelector(".pola10")
-
 
 
 let listItems=document.querySelectorAll('li')
@@ -48,28 +40,28 @@ let faqQuestions = document.querySelectorAll('.faq-question');
 
 const day1Content = `
 <ul>
-  <li class="item1"><button class="clicked">15h00 - Accueil du public</button></li>
-  <li class="item2"><button>15h30 pétante - Cérémonie laïque</button></li>
-  <li class="item3"><button>17h00 - Quartier libre</button></li>
-  <li class="item4"><button>18h00 - Apéro</button></li>
-  <li class="item5"><button>20h00 - Dîner assis</button></li>
-  <li class="item6"><button>23h30 pas forcément pétante - Ce pour quoi on est là</button></li>
+<li class="item1"><button class="clicked"><strong>15h00</strong> | <i>Accueil du public</i></button></li>
+<li class="item2"><button><strong>15h30 <u>pétante</u></strong>  | <i>Cérémonie laïque</i></button></li>
+<li class="item3"><button><strong>17h00</strong> | <i>Quartier libre</i></button></li>
+<li class="item4"><button><strong>18h00</strong> | <i>Apéro</i></button></li>
+<li class="item5"><button><strong>20h00</strong>  | <i>Dîner assis</i></button></li>
+<li class="item6"><button><strong>Ce pourquoi on est là 💃🕺</strong></button></li>
 </ul>
 `;
 
 const day2Content = `
 <ul>
-  <li class="item7"><button class="clicked">Aux aurores - Soupe à l’oignon</button></li>
-  <li class="item8"><button>Au réveil - Brunch</button></li>
+  <li class="item7"><button class="clicked"><strong>Aux aurores</strong> | <i>Soupe à l’oignon</i></button></li>
+  <li class="item8"><button><strong>Au réveil</strong> | <i>Brunch</i></button></li>
 </ul>
 `;
 
 const item1Content=`
-<p class="text-wedding">Bison futé annonce un trafic limité en Beauce, nous vous attendons donc à l’heure au domaine de la Brosse Montmort. Un nom qui tue pour fêter la vie.</p>
+<p class="text-wedding">Bison futé annonce un trafic limité en Beauce, nous vous attendons donc à l’heure au domaine de la Brosse Montmort. <br>Un nom qui tue pour fêter la vie.</p>
 `;
 
 const item2Content=`
-<p class="text-wedding">La meilleure oratrice et le plus grand rhéteur du Loir & Cher consacreront notre mariage suite à une série de discours qui auront déclenché une véritable panoplie d’émotions dans l’assemblée. Prévoyez rimmel waterproof et petits mouchoirs.</p>
+<p class="text-wedding">La meilleure oratrice et le plus grand rhéteur du Loir & Cher consacreront notre mariage suite à une série de discours qui auront déclenché une véritable panoplie d’émotions dans l’assemblée. <br> Prévoyez rimmel waterproof et petits mouchoirs.</p>
 `;
 
 const item3Content=`
@@ -77,7 +69,7 @@ const item3Content=`
 `;
 
 const item4Content=`
-<p class="text-wedding">L’heure préférée des français·e·s, un instant de convivialité partagé au gré de quelques coupes de joie, pintes de rire et bouchées de bonheur.</p>
+<p class="text-wedding">L’heure préférée des français·e·s, <br> un instant de convivialité partagé au gré de quelques coupes de joie, pintes de rire et bouchées de bonheur.</p>
 `;
 
 const item5Content=`
@@ -108,7 +100,6 @@ const programContent = document.querySelector('.program-content');
 
 window.addEventListener('scroll', ()=> {
     sections.style.transform = "translate3d(0px, " + (-window.scrollY/1) + "px, 0px)";
-    // if (window.innerWidth > 600) {
       cloud1.style.transform="translate3d(0px," + (-window.scrollY/4.5)+"px, 0px)";
       cloud2.style.transform="translate3d(0px," + (-window.scrollY/2)+"px, 0px)";
       title1.style.transform="translate3d(0px," + (-window.scrollY/2)+"px, 0px)";
@@ -119,16 +110,10 @@ window.addEventListener('scroll', ()=> {
   
       if(scrollY>400){
       cloud3.style.transform="translate3d(0px," + (-window.scrollY/3)+"px, 0px)";
-      title4.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
-      title5.style.transform="translate3d(0px," + (-window.scrollY/5)+"px, 0px)";
-     
+
       }
   
-      if(scrollY>800){
-          title6.style.transform="translate3d(0px," + (-window.scrollY/4)+"px, 0px)";
-          title7.style.transform="translate3d(0px," + (-window.scrollY/5)+"px, 0px)";
-         
-          }
+
 
       let position1 = pola1.getBoundingClientRect();
       let position2 = pola2.getBoundingClientRect();
@@ -137,9 +122,7 @@ window.addEventListener('scroll', ()=> {
       let position5 = pola5.getBoundingClientRect();
       let position6 = pola6.getBoundingClientRect();
       let position7 = pola7.getBoundingClientRect();
-      let position8 = pola8.getBoundingClientRect();
-      let position9 = pola9.getBoundingClientRect();
-      let position10 = pola10.getBoundingClientRect();
+
 
   
   
@@ -181,24 +164,7 @@ window.addEventListener('scroll', ()=> {
           pola7.style.transform = 'translateY(-100px) rotate(5deg)';
       }
   
-      if (position8.top >= 0 && position8.bottom <= window.innerHeight) {
-          // move the element up by 100px
-          pola8.style.transform = 'translateY(-100px) rotate(-10deg)';
-      }
   
-      if (position9.top >= 0 && position9.bottom <= window.innerHeight) {
-          // move the element up by 100px
-          pola9.style.transform = 'translateY(-100px) rotate(20deg)';
-      }
-  
-      if (position10.top >= 0 && position10.bottom <= window.innerHeight) {
-          // move the element up by 100px
-          pola10.style.transform = 'translateY(-100px) rotate(-10deg)';
-      }
-  
-  
-
-    // }
 
 
 
@@ -211,12 +177,12 @@ window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
     const startScroll1 = 3000;
     const maxScroll1 = 5000;
-    const maxScroll2 = 7000;
+    const maxScroll2 = 6000;
     const maxScroll3 = 8000;
     const maxScroll4 = 10000;
 
     // Initial and target colors
-    const initial = {r: 241, g: 194, b: 50};
+    const initial = {r: 219, g: 176, b: 67};
     const target1 = {r: 162, g: 128, b: 116};
     const target2 = {r: 48, g: 114, b: 120};
     const target3 = {r: 8, g: 7, b: 45};
