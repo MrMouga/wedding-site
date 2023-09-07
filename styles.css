@@ -1,7 +1,9 @@
 html, body {
     margin: 0;
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* adjust the pixel amount here for your top navigation bar height */
 }
+
 
 @font-face { font-family: Yasashii; src: url('Yasashii.ttf'); } 
 @font-face { font-family: Cyrene; src: url('Cyrene.otf'); } 
@@ -22,11 +24,13 @@ strong {
     font-weight: 600;
 }
 
-.logo{
+.logo a{
     font-size:2em;
     font-family:Yasashii;
+    color:white;
     border:1px solid white;
     padding:10px;
+    text-decoration: none;
 }
 
 h1{
@@ -648,23 +652,32 @@ section p{
 
 .list-sleep li{
     list-style: none;
-    font-size: 1.5em;
+
 }
 
 .list-sleep a{
     font-family:Montserrat;
+    font-size: 1.5em;
     color:white;
+}
+
+.list-sleep div{
+    font-size:1em;
 }
 
 
 
 
 .faq-answer {
+
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+  
 
   }
+
+
   
   .arrow {
     transition: transform 0.2s ease-out;
@@ -939,9 +952,13 @@ text-align:left;
     margin-top:5%;
  }
  .list-sleep li{
-    font-size:1.3em;
-    line-height:1.5em;
+
+    line-height:2.3em;
     text-align:center;
+ }
+
+ .list-sleep a{
+    font-size:1.3em;
  }
 
  .days button:hover, .days button.clicked,  .program-list button.clicked{
@@ -964,6 +981,9 @@ text-align:left;
     font-size:6em;
     margin:0;
 }
+
+
+
 
 
 }

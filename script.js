@@ -61,11 +61,11 @@ const item1Content=`
 `;
 
 const item2Content=`
-<p class="text-wedding">La meilleure oratrice et le plus grand rhéteur du Loir & Cher consacreront notre mariage suite à une série de discours qui auront déclenché une véritable panoplie d’émotions dans l’assemblée. <br> Prévoyez rimmel waterproof et petits mouchoirs.</p>
+<p class="text-wedding">La meilleure oratrice et le plus grand rhéteur du Loir & Cher consacreront notre mariage suite à une série de discours qui auront déclenché une véritable panoplie d’émotions dans l’assemblée. <br> Petits mouchoirs recommandés.</p>
 `;
 
 const item3Content=`
-<p class="text-wedding">ou presque, nous immortaliserons l’instant par quelques photos et profiterons du domaine pour jouer, chanter, danser, vivre.</p>
+<p class="text-wedding">...ou presque, nous immortaliserons l’instant par quelques photos et profiterons du domaine pour jouer, chanter, danser, vivre.</p>
 `;
 
 const item4Content=`
@@ -175,11 +175,21 @@ window.addEventListener('scroll', ()=> {
 //Change background color on scroll
 window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
-    const startScroll1 = 3000;
-    const maxScroll1 = 5000;
-    const maxScroll2 = 6000;
-    const maxScroll3 = 8000;
-    const maxScroll4 = 10000;
+    let startScroll1, maxScroll1, maxScroll2, maxScroll3, maxScroll4;
+
+    if (window.innerWidth < 768) {
+        startScroll1 = 2500;
+        maxScroll1 = 3500;
+        maxScroll2 = 4300;
+        maxScroll3 = 6000;
+        maxScroll4 = 7500;
+    } else {
+        startScroll1 = 3000;
+        maxScroll1 = 5000;
+        maxScroll2 = 6000;
+        maxScroll3 = 8000;
+        maxScroll4 = 10000;
+    }
 
     // Initial and target colors
     const initial = {r: 219, g: 176, b: 67};
