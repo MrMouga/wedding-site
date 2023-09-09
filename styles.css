@@ -1,3 +1,5 @@
+
+
 html, body {
     margin: 0;
     scroll-behavior: smooth;
@@ -961,10 +963,10 @@ text-align:left;
     font-size:1.3em;
  }
 
- .days button:hover, .days button.clicked,  .program-list button.clicked{
+ /* .days button:hover, .days button.clicked,  .program-list button.clicked{
     color: #977464;
 
-  }
+  } */
 #title .title3{
     font-size:1.4em;
 }
@@ -1161,3 +1163,5 @@ text-align:left;
     } 
 
 }
+
+

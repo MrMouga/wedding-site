@@ -180,7 +180,7 @@ window.addEventListener('scroll', function() {
     if (window.innerWidth < 768) {
         startScroll1 = 2500;
         maxScroll1 = 3500;
-        maxScroll2 = 4300;
+        maxScroll2 = 3800;
         maxScroll3 = 6000;
         maxScroll4 = 7500;
     } else {
@@ -193,7 +193,7 @@ window.addEventListener('scroll', function() {
 
     // Initial and target colors
     const initial = {r: 219, g: 176, b: 67};
-    const target1 = {r: 162, g: 128, b: 116};
+    const target1 = {r: 216, g: 110, b: 57};
     const target2 = {r: 48, g: 114, b: 120};
     const target3 = {r: 8, g: 7, b: 45};
     const target4 = {r: 16, g: 88, b: 104};

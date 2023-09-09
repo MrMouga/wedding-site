@@ -14,7 +14,7 @@
     
 </head>
 <body>
- <!-- <div style="display:block" class="overlay"></div> -->
+
 
  <nav class="navbar">
 
@@ -106,7 +106,7 @@
 
                     <div id="intro">
                         <div class="text-section">
-                            <p class="title4">Après ces années de partage <br>nous y voilà...</p>
+                            <p class="title4">Après ces années de partage, <br>nous y voilà...</p>
                             <h3 class="title5"> <span>N</span>ous <span>A</span>llons <span><br>N</span>ous<span> M</span>arier !</h3>
     
                         </div>
@@ -265,10 +265,12 @@
               <button class="faq-question"><h2>Quels sont les articles figurant sur la liste de mariage ?
             </h2> <div class="arrow"></div></button>
               <div class="faq-answer map-container"><p>Nous sommes déjà bien équipés et n’avons pas tellement besoin de plus. À la réflexion, il y a deux choses que nous aimons particulièrement : aller au restau, et parler des prochains restau à faire. Tu trouveras ci-dessous une carte où figurent des adresses que nous avons eu la chance de visiter tous les deux ou avec famille et amis et que nous recommandons chaudement. Nous y avons ajouté plusieurs établissements qui nous font très envie. Une cagnotte sera mise à disposition si tu souhaites nous aider à réaliser ce voyage de noce gastronomique.</p>
-                <iframe src="https://www.google.com/maps/d/embed?mid=1JSWcVQvXbEiTYL3YUaam8EEb9rENDoE&ehbc=2E312F" width="640" height="480"></iframe>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1JSWcVQvXbEiTYL3YUaam8EEb9rENDoE&ehbc=2E312F" width="100%" height="480"></iframe>
             </div>
             </div>
     </section>
+
+    <div class="space"></div>
 
 
     <section id="rsvp">
@@ -322,5 +324,13 @@
 
 
 <script src="script.js"></script> 
+<script>
+    if (navigator.userAgent.match(/samsung/i)) {
+        alert("Votre navigateur (Samsung Internet) modifie peut-être l'aspect " + 
+              "de ce site web. Merci d'utiliser un autre navigateur " + 
+              "compatible. \n\n" +
+              "Nous vous recommandons Firefox, Microsoft Edge, ou Google Chrome.");
+    }
+ </script>
 </body>
 </html>
