@@ -192,7 +192,7 @@ window.addEventListener('scroll', function() {
     }
 
     // Initial and target colors
-    const initial = {r: 219, g: 176, b: 67};
+    const initial = {r: 255, g: 216, b: 11};
     const target1 = {r: 216, g: 110, b: 57};
     const target2 = {r: 48, g: 114, b: 120};
     const target3 = {r: 8, g: 7, b: 45};

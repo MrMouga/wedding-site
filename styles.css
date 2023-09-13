@@ -14,7 +14,7 @@ html, body {
 
 body{
     color: #fff;
-    background-color: #DBB043;
+    background-color: #ffd80bff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -804,17 +804,10 @@ text-align:left;
     
 } 
 
- /* @keyframes rotate {
-	to {
-		transform: rotate(360deg);
-	}
+#tally{
+    border-radius:20px;
+    margin-top:5%;
 }
-
-@keyframes rotateReverse {
-	to {
-		transform: rotate(-360deg);
-	}
-}  */
 
 .signature{
     font-size: 0.9em;
