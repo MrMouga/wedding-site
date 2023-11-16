@@ -40,9 +40,9 @@ let faqQuestions = document.querySelectorAll('.faq-question');
 
 const day1Content = `
 <ul>
-<li class="item1"><button class="clicked"><strong>15h00</strong> | <i>Accueil du public</i></button></li>
-<li class="item2"><button><strong>15h30 <u>pétante</u></strong>  | <i>Cérémonie laïque</i></button></li>
-<li class="item3"><button><strong>17h00</strong> | <i>Quartier libre</i></button></li>
+<li class="item1"><button class="clicked"><strong>14h30</strong> | <i>Accueil du public</i></button></li>
+<li class="item2"><button><strong>15h00 <u>pétante</u></strong>  | <i>Cérémonie laïque</i></button></li>
+<li class="item3"><button><strong>17h00</strong> | <i>Quartier libre...</i></button></li>
 <li class="item4"><button><strong>18h00</strong> | <i>Apéro</i></button></li>
 <li class="item5"><button><strong>20h00</strong>  | <i>Dîner assis</i></button></li>
 <li class="item6"><button><strong>Ce pourquoi on est là 💃🕺</strong></button></li>
@@ -193,7 +193,7 @@ window.addEventListener('scroll', function() {
 
     // Initial and target colors
     const initial = {r: 255, g: 216, b: 11};
-    const target1 = {r: 216, g: 110, b: 57};
+    const target1 = {r: 220, g: 107, b: 0};
     const target2 = {r: 48, g: 114, b: 120};
     const target3 = {r: 8, g: 7, b: 45};
     const target4 = {r: 16, g: 88, b: 104};
