@@ -61,7 +61,7 @@ const item1Content=`
 `;
 
 const item2Content=`
-<p class="text-wedding">La meilleure oratrice et le plus grand rhéteur du Loir & Cher consacreront notre mariage suite à une série de discours qui auront déclenché une véritable panoplie d’émotions dans l’assemblée. <br> Petits mouchoirs recommandés.</p>
+<p class="text-wedding">La meilleure oratrice et le plus grand rhéteur du Loir-et-Cher consacreront notre mariage suite à une série de discours qui auront déclenché une véritable panoplie d’émotions dans l’assemblée. <br> Petits mouchoirs recommandés.</p>
 `;
 
 const item3Content=`
@@ -69,7 +69,7 @@ const item3Content=`
 `;
 
 const item4Content=`
-<p class="text-wedding">L’heure préférée des français·e·s, <br> un instant de convivialité partagé au gré de quelques coupes de joie, pintes de rire et bouchées de bonheur.</p>
+<p class="text-wedding">L’heure préférée des Français·e·s, <br> un instant de convivialité partagé au gré de quelques coupes de joie, pintes de rire et bouchées de bonheur.</p>
 `;
 
 const item5Content=`
